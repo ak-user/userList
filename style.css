@@ -1,0 +1,19 @@
+ul {
+    padding-left: 10px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.complete {
+    color: green;
+}
+
+.hide {
+    display: none;
+}
+
+to-do-list {
+    display: inline-block;
+}
