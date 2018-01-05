@@ -1,0 +1,9 @@
+<div class="data">
+    <ul>
+        <li
+                ng-repeat="user in userList track by $index"
+                ng-click="selectUser(user)"
+                ng-class="{'selected_user': user == selectedUser}"
+        >{{user.name + ' ' + user.lastName}}</li>
+    </ul>
+</div>

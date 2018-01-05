@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="toDo">
+<html lang="en" ng-app="userApp">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <to-do-list></to-do-list>
-        <to-do-list></to-do-list>
-        <to-do-list></to-do-list>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
-    <script src="main.js"></script>
-    <script src="toDoList.js"></script>
+<div class="app" ng-controller="myCntr">
+    <user-list selected-user="selectedUser"></user-list>
+    <user-data-view user="selectedUser" is-editing="isEditing" ng-hide="isEditing"
+                    user-data="userData"></user-data-view>
+    <user-data-edit ng-show="isEditing" on-finish="stopEditing()" user="selectedUser"
+                    ></user-data-edit>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+<script src="main.js"></script>
+<script src="directives/user-list/userList.js"></script>
+<script src="directives/user-data-view/userDataView.js"></script>
+<script src="directives/user-data-edit/userDataEdit.js"></script>
 </body>
 </html>

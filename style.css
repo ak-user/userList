@@ -1,19 +1,51 @@
-ul {
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    width: 1024px;
+    height: 100vh;
+    background: #eee;
+}
+
+user-list {
+    width: 30%;
+    height: 100%;
+    border-right: 3px solid grey;
+    float: left;
+}
+
+user-list .selected_user {
+    color: green;
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+user-list ul {
     padding-left: 10px;
 }
 
-ul li {
+user-list li {
+    padding: 5px 0;
     list-style-type: none;
+    cursor: pointer;
 }
 
-.complete {
-    color: green;
+user-data-view div {
+    padding-left: 30%;
 }
 
-.hide {
-    display: none;
+.data {
+    padding-top: 50px;
+    padding-left: 35%;
 }
 
-to-do-list {
-    display: inline-block;
+.data_item  {
+    display: block;
+    padding: 10px 0;
 }

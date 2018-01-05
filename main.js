@@ -1,6 +1,10 @@
+angular.module('userApp', []).controller('myCntr', function ($scope, $rootScope) {
+    $scope.selectedUser = {};
+    $scope.userData = {};
 
-
-angular.module('toDo', []);
-
+    $scope.stopEditing = function () {
+        $scope.isEditing = false;
+    };
+});
 
 
