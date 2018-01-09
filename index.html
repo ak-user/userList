@@ -7,11 +7,9 @@
 </head>
 <body>
 <div class="app" ng-controller="myCntr">
-    <user-list selected-user="selectedUser"></user-list>
-    <user-data-view user="selectedUser" is-editing="isEditing" ng-hide="isEditing"
-                    user-data="userData"></user-data-view>
-    <user-data-edit ng-show="isEditing" on-finish="stopEditing()" user="selectedUser"
-                    ></user-data-edit>
+    <user-list></user-list>
+    <user-data-view ng-hide="isEditing"></user-data-view>
+    <user-data-edit ng-show="isEditing"></user-data-edit>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
 <script src="main.js"></script>

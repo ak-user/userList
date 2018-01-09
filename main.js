@@ -1,10 +1,26 @@
-angular.module('userApp', []).controller('myCntr', function ($scope, $rootScope) {
-    $scope.selectedUser = {};
-    $scope.userData = {};
+angular.module('userApp', []).controller('myCntr', function ($scope) {
 
-    $scope.stopEditing = function () {
-        $scope.isEditing = false;
-    };
+    $scope.isEditing = false;
+
+    angular.forEach([
+            'saveUserEvent',
+            'editCanceledEvent',
+            'deleteUserEvent'
+        ], function (value) {
+            $scope.$on(value, function (event) {
+                $scope.isEditing = false;
+        });
+    });
+
+    angular.forEach([
+        'onEditedEvent',
+    ], function (value) {
+        $scope.$on(value, function (event) {
+            $scope.isEditing = true;
+        });
+    });
+
+
 });
 
 
