@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b426a01e-529b-44e4-ae0e-dcb62b7230c4" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/components/mainСomponent/main.comp.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/components/mainСomponent/main.comp.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/components/userDataEdit/userDataEdit.comp.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/components/userDataView/userDataView.comp.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/components/userList/userList.comp.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/server.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/9951e71c090f4159177b2d95fe4287ed25d52d69" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e93d959be641d934fb0ac50370d06ae15237702" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9f7237a9b617e95dd1b194246e3da27a6318bc3e" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/4/c4a4248f7568c9e41265502c39b0daeb8b635431" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/directives/user-data-edit/user-data-edit.html" afterPath="$PROJECT_DIR$/components/userDataEdit/userDataEdit.comp.html" />
-      <change beforePath="$PROJECT_DIR$/directives/user-data-edit/userDataEdit.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/directives/user-data-view/user-data-view.html" afterPath="$PROJECT_DIR$/components/userDataView/userDataView.comp.html" />
-      <change beforePath="$PROJECT_DIR$/directives/user-data-view/userDataView.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/directives/user-list/user-list.html" afterPath="$PROJECT_DIR$/components/userList/userList.comp.html" />
-      <change beforePath="$PROJECT_DIR$/directives/user-list/userList.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/main.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -460,12 +439,12 @@
       <workItem from="1515481888099" duration="34489000" />
       <workItem from="1515539934832" duration="2148000" />
       <workItem from="1515569764872" duration="15662000" />
-      <workItem from="1515590722874" duration="6907000" />
+      <workItem from="1515590722874" duration="7269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183443000" />
+    <option name="totallyTimeSpent" value="183805000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -478,7 +457,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -489,7 +467,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18576196" sideWeight="0.4980631" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6974416" sideWeight="0.4980631" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15550636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
