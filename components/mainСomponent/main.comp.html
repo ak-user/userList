@@ -1,0 +1,11 @@
+<div class="app container">
+    <div class="row">
+        <div class="col-xs-4">
+            <user-list></user-list>
+        </div>
+        <div class="col-xs-8">
+            <user-data-view ng-hide="isEditing"></user-data-view>
+            <user-data-edit ng-show="isEditing"></user-data-edit>
+        </div>
+    </div>
+</div>

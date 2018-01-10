@@ -1,0 +1,17 @@
+<div class="data">
+    <button ng-click="editUser()" class="btn btn-primary">Edit</button>
+    <ul>
+        <li>
+            Name: {{user.name}}
+        </li>
+        <li>
+            Last Name: {{user.lastName}}
+        </li>
+        <li>
+            Birthday: {{user.birthday | date:"dd.MM.yyyy"}}
+        </li>
+        <li>
+            Sex: {{user.sex}}
+        </li>
+    </ul>
+</div>

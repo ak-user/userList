@@ -1,0 +1,32 @@
+<div class="data">
+    <form>
+        <button ng-click="saveEditing()" class="btn btn-success">Save</button>
+        <button ng-click="cancelEditing()" class="btn btn-danger">Cancel</button>
+        <button ng-click="deleteUserHandlerButton()" class="btn btn-warning">Delete</button>
+        <div class="form-group">
+            <label class="data_item">Name: </label>
+            <input type="text" class="form-control" ng-model="tempUser.name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label class="data_item">Last Name: </label>
+            <input type="text" class="form-control" ng-model="tempUser.lastName" placeholder="Enter your last name">
+        </div>
+        <!--<div class="form-group">-->
+            <!--<label>Birthday: </label>-->
+            <!--<input type="text" class="form-control" ng-model="tempUser.birthday" placeholder="Enter your birthday">-->
+        <!--</div>-->
+        <div class="input-group">
+            <input type="text" class="form-control" uib-datepicker-popup ng-model="tempUser.birthday" is-open="popup.opened" close-text="Close" />
+            <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="openPopup()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </div>
+        <div class="form-group">
+            <label class="data_item">Sex: </label>
+            <select ng-model="tempUser.sex">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+    </form>
+</div>

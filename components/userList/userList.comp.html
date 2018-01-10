@@ -1,0 +1,11 @@
+<div class="data">
+    <button ng-click="onAdded()" class="btn btn-primary">Add</button>
+    <input type="text" ng-model="filteredUser" class="form-control">
+    <ul>
+        <li
+                ng-repeat="user in userList | filter: filteredUser"
+                ng-click="selectUser(user)"
+                ng-class="{'selected_user': user == selectedUser}"
+        >{{user.name + ' ' + user.lastName}}</li>
+    </ul>
+</div>

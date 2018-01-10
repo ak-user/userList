@@ -8,16 +8,8 @@ body {
 }
 
 .app {
-    width: 1024px;
     height: 100vh;
     background: #eee;
-}
-
-user-list {
-    width: 30%;
-    height: 100%;
-    border-right: 3px solid grey;
-    float: left;
 }
 
 user-list .selected_user {
@@ -34,18 +26,4 @@ user-list li {
     padding: 5px 0;
     list-style-type: none;
     cursor: pointer;
-}
-
-user-data-view div {
-    padding-left: 30%;
-}
-
-.data {
-    padding-top: 50px;
-    padding-left: 35%;
-}
-
-.data_item  {
-    display: block;
-    padding: 10px 0;
 }

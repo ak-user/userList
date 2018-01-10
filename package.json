@@ -1,0 +1,29 @@
+{
+  "name": "userlist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonkopchak/userList.git"
+  },
+  "author": "Anton Kopchak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antonkopchak/userList/issues"
+  },
+  "homepage": "https://github.com/antonkopchak/userList#readme",
+  "devDependencies": {
+    "angular": "^1.6.8",
+    "angular-animate": "^1.6.8",
+    "angular-sanitize": "^1.6.8",
+    "angular-ui-bootstrap": "^2.5.6",
+    "bootstrap": "^3.3.7"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

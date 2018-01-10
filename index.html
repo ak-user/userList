@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="app" ng-controller="myCntr">
-    <user-list></user-list>
-    <user-data-view ng-hide="isEditing"></user-data-view>
-    <user-data-edit ng-show="isEditing"></user-data-edit>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
-<script src="main.js"></script>
-<script src="directives/user-list/userList.js"></script>
-<script src="directives/user-data-view/userDataView.js"></script>
-<script src="directives/user-data-edit/userDataEdit.js"></script>
+    <main-component></main-component>
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script src="index.js"></script>
+    <script src="components/mainСomponent/main.comp.js"></script>
+    <script src="components/userList/userList.comp.js"></script>
+    <script src="components/userDataView/userDataView.comp.js"></script>
+    <script src="components/userDataEdit/userDataEdit.comp.js"></script>
 </body>
 </html>
