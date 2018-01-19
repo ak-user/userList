@@ -1,28 +1,30 @@
 angular.module('userApp').component('userDataEdit', {
     templateUrl: 'components/userDataEdit/userDataEdit.comp.html',
-    controller: function ($scope, $rootScope) {
-        $scope.$on('userSelectedEvent', function (event, data) {
-            $scope.tempUser = angular.copy(data);
+    controllerAs: 'userDataEditCntr',
+    controller: function ($rootScope) {
+        var vm = this;
+        $rootScope.$on('userSelectedEvent', function (event, data) {
+            vm.tempUser = angular.copy(data);
 
-            $scope.saveEditing = function () {
-                var user = angular.merge(data, $scope.tempUser);
+            vm.saveEditing = function () {
+                var user = angular.merge(data, vm.tempUser);
                 $rootScope.$broadcast('saveUserEvent', user);
             };
 
-            $scope.cancelEditing = function () {
+            vm.cancelEditing = function () {
                 $rootScope.$broadcast('editCanceledEvent');
             };
 
-            $scope.deleteUserHandlerButton = function () {
+            vm.deleteUserHandlerButton = function () {
                 $rootScope.$broadcast('deleteUserEvent', data);
             };
 
-            $scope.popup = {
+            vm.popup = {
                 opened: false
             };
 
-            $scope.openPopup = function () {
-                $scope.popup.opened = true;
+            vm.openPopup = function () {
+                vm.popup.opened = true;
             };
         });
     }

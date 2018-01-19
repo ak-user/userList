@@ -1,11 +1,20 @@
-<div class="data">
-    <button ng-click="onAdded()" class="btn btn-primary">Add</button>
-    <input type="text" ng-model="filteredUser" class="form-control">
-    <ul>
-        <li
-                ng-repeat="user in userList | filter: filteredUser"
-                ng-click="selectUser(user)"
-                ng-class="{'selected_user': user == selectedUser}"
-        >{{user.name + ' ' + user.lastName}}</li>
-    </ul>
+<div class="user-list">
+    <div class="user-list__title-wrap">
+        <h1 class="user-list__title-name">User List</h1>
+        <div class="user-list__search-box">
+            <input type="text" ng-model="filteredUser" class="form-control">
+        </div>
+    </div>
+    <div class="user-list__items">
+        <ul>
+            <li
+                    ng-repeat="user in userListCntrl.userList | filter: filteredUser"
+                    ng-click="userListCntrl.selectUser(user)"
+                    ng-class="{'selected_user': user == userListCntrl.selectedUser}"
+            ><i class="glyphicon glyphicon-user"></i>
+                {{user.name + ' ' + user.lastName}}
+            </li>
+        </ul>
+    </div>
+    <a ng-click="userListCntrl.onAdded()" class="btn btn-primary user-list__btn">+</a>
 </div>

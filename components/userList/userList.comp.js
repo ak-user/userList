@@ -1,66 +1,76 @@
 angular.module('userApp').component('userList', {
     templateUrl: 'components/userList/userList.comp.html',
-    controller: function ($scope, $rootScope, $timeout, userService) {
-
+    controllerAs: 'userListCntrl',
+    controller: function ($rootScope, $timeout, userService) {
+        var vm = this;
         var addingUser = false;
 
-
-
         userService.getUsers().then(function (value) {
-            $scope.userList = value.data;
+            vm.userList = value.data;
         });
 
-        $scope.selectUser = function (user) {
-            $scope.selectedUser = user;
+        vm.selectUser = function (user) {
+            vm.selectedUser = user;
             $rootScope.$broadcast('userSelectedEvent', user);
         };
 
         $timeout(function () {
-            $scope.selectUser($scope.userList[0]);
+            vm.selectUser(vm.userList[0]);
         });
 
-        $scope.$on('saveUserEvent', function (event, editedUser) {
-            $scope.selectedUser = editedUser;
+        $rootScope.$on('saveUserEvent', function (event, editedUser) {
+            vm.selectedUser = editedUser;
             if (addingUser) {
-                userService.postUser($scope.selectedUser).then(function (value) {
-                    $scope.selectUser($scope.userList[$scope.userList.length -1]);
+                userService.postUser(vm.selectedUser).then(function () {
+                    vm.selectUser(vm.userList[vm.userList.length - 1]);
+                    addingUser = false;
                 });
             } else {
-                userService.putUser($scope.selectedUser.id, $scope.selectedUser);
+                userService.putUser(vm.selectedUser._id, vm.selectedUser);
             }
-
         });
 
-        $scope.$on('deleteUserEvent', function (event, editedUser) {
-            userService.deleteUser(editedUser.id).then(function () {
-                var index = $scope.userList.indexOf(editedUser);
-                $scope.userList.splice(index, 1);
-                $scope.selectUser($scope.userList[0]);
-            });
-        });
-
-        $scope.$on('editCanceledEvent', function (event) {
-
+        $rootScope.$on('deleteUserEvent', function (event, editedUser) {
             if (addingUser) {
-                $scope.userList.splice(0, 1);
-                $scope.selectUser($scope.userList[0]);
+                var lastUserIndex = vm.userList.length - 1;
+                vm.userList.splice(lastUserIndex, 1);
+                addingUser = false;
+            } else {
+                userService.deleteUser(editedUser._id).then(function () {
+                    var index = vm.userList.indexOf(editedUser);
+                    vm.userList.splice(index, 1);
+                    vm.selectUser(vm.userList[0]);
+                });
             }
         });
 
-        $scope.onAdded = function () {
+        $rootScope.$on('editCanceledEvent', function () {
+            if (addingUser) {
+                var lastUserIndex = vm.userList.length - 1;
+                vm.userList.splice(lastUserIndex, 1);
+                vm.selectUser(vm.userList[0]);
+                addingUser = false;
+            }
+        });
+
+        vm.onAdded = function () {
+            if (addingUser) {
+                var lastUserIndex = vm.userList.length - 1;
+                vm.userList.splice(lastUserIndex, 1);
+            }
 
             addingUser = true;
 
             var newUser = {
-                name: '$%6yry',
-                lastName: '',
-                birthday: '',
+                name: 'New name',
+                lastName: 'New last name',
+                birthday: Date.now(),
                 sex: 'Male'
             };
 
-            $scope.selectUser(newUser);
+            vm.selectUser(newUser);
 
-            $scope.userList.push(newUser);
+            vm.userList.push(newUser);
             $rootScope.$broadcast('onEditedEvent');
         };
     }

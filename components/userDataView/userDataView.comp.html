@@ -1,17 +1,17 @@
 <div class="data">
-    <button ng-click="editUser()" class="btn btn-primary">Edit</button>
+    <a ng-click="userDataViewCntr.editUser()" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
     <ul>
         <li>
-            Name: {{user.name}}
+            Name: <span>{{userDataViewCntr.user.name}}</span>
         </li>
         <li>
-            Last Name: {{user.lastName}}
+            Last Name: <span>{{userDataViewCntr.user.lastName}}</span>
         </li>
         <li>
-            Birthday: {{user.birthday | date:"dd.MM.yyyy"}}
+            Birthday: <span>{{userDataViewCntr.user.birthday | date:"dd.MM.yyyy"}}</span>
         </li>
         <li>
-            Sex: {{user.sex}}
+            Sex: <span>{{userDataViewCntr.user.sex}}</span>
         </li>
     </ul>
 </div>

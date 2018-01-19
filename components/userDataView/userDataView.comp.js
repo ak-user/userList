@@ -1,14 +1,15 @@
 angular.module('userApp').component('userDataView', {
     templateUrl: 'components/userDataView/userDataView.comp.html',
-    controller: function ($scope, $rootScope) {
-
-        $scope.$on('userSelectedEvent', function (event, data) {
-            $scope.user = data;
+    controllerAs: 'userDataViewCntr',
+    controller: function ($rootScope) {
+        var vm = this;
+        $rootScope.$on('userSelectedEvent', function (event, data) {
+            vm.user = data;
         });
 
         var isEditing = true;
 
-        $scope.editUser = function () {
+        vm.editUser = function () {
             $rootScope.$broadcast('onEditedEvent', isEditing);
         };
     }

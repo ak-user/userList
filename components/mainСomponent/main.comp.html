@@ -1,11 +1,7 @@
-<div class="app container">
-    <div class="row">
-        <div class="col-xs-4">
-            <user-list></user-list>
-        </div>
-        <div class="col-xs-8">
-            <user-data-view ng-hide="isEditing"></user-data-view>
-            <user-data-edit ng-show="isEditing"></user-data-edit>
-        </div>
+<div class="app container-fluid">
+    <user-list class="col-xs-12 col-sm-12 col-md-4 sidebar"></user-list>
+    <div class="col-xs-12 col-sm-12 col-md-8 content">
+        <user-data-view ng-hide="isEditing"></user-data-view>
+        <user-data-edit ng-show="isEditing"></user-data-edit>
     </div>
 </div>

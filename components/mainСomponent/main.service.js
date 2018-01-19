@@ -11,7 +11,7 @@ angular.module('userApp').factory('userService', function ($http) {
     }
 
     function putUser(id, data) {
-        return $http.put(basedUrl + '/users/' + id, data);
+       return $http.put(basedUrl + '/users/' + id, data);
     }
 
     function deleteUser(id) {
